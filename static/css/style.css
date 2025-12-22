@@ -19,47 +19,47 @@ content {
     background-color: rgb(164, 194, 244);
     color: rgb(78, 139, 232);
 
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-left: 3.646vw;
+    margin-right: 3.646vw;
+    margin-top: 2.083vw;
+    margin-bottom: 2.083vw;
 
-    max-width: 1400px;
+    max-width: 72.917vw;
 
     text-align: center;
     font-family: 'Lexend', sans-serif;
-    font-weight: 100px;
-    font-size: 40px;
+    font-weight: 5.208vw;
+    font-size: 2.5083vw;
     
-    border-radius: 25px;
+    border-radius: 1.302vw;
 }
 
 #title {
     background-color: rgb(164, 194, 244);
     color: rgb(78, 139, 232);
 
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-left: 3.646vw;
+    margin-right: 3.646vw;
+    margin-top: 2.083vw;
+    margin-bottom: 2.083vw;
 
-    max-width: 1400px;
+    max-width: 90.917vw;
 
     text-align: center;
     font-family: 'Lexend', sans-serif;
-    font-weight: 100px;
-    font-size: 40px;
+    font-weight: 5.208vw;
+    font-size: 2.5083vw;
     
-    border-radius: 25px;
+    border-radius: 1.302vw;
 }
 
 
 .form-control {
-    max-width: 400px;
+    max-width: 26.083vw;
     position: absolute;
 
-    top: 270px;
-    left: 550px;
+    top: 17.593vw;
+    left: 36vw
 }
 
 .uploadButton {
@@ -69,11 +69,11 @@ content {
     scale: 1.2;
     position: absolute;
     
-    top: 274px;
-    left: 960px;
+    top: 17.9vw;
+    left: 62.9vw;
 
     border-radius: 15%;
-    border: 5px;
+    border: 1vw;
 }
 
 .uploadButton:hover {
@@ -84,8 +84,8 @@ content {
 #maintext {
 
     position: absolute;
-    top: 350px;
-    max-width: 1400px;
+    top: 23.9vw;
+    max-width: 90.917vw;
 
 }
 
@@ -94,9 +94,9 @@ content {
 
     position: absolute;
     top: 68vh;
-    left: 35vw;
+    left: 35%;
 
-    max-width: 400px;
+    max-width: 26.083vw;
 
 }
 
@@ -105,9 +105,9 @@ content {
 
     position: absolute;
     top: 23vh;
-    left: 35vw;
+    left: 35%;
 
-    max-width: 400px;
+    max-width: 26.083vw;
 }
 
 #downloadButton {
@@ -116,11 +116,11 @@ content {
     scale: 1.2;
     position: absolute;
     
-    top: 32.4vh;
-    left: 960px;
+    top: 31.0vh;
+    left: 60vw;
 
     border-radius: 15%;
-    border: 5px;
+    border: 1vw;
 }
 
 #downloadButton:hover {
@@ -129,7 +129,7 @@ content {
 }
 ul {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 2.5vw;
 }
 
 .container-fluid {
@@ -138,14 +138,14 @@ ul {
 
     text-align: center;
     font-family: 'Lexend', sans-serif;
-    font-weight: 100px;
-    font-size: 40px;
+    font-weight: 20vw;
+    font-size: 2.5vw;
 
 }
 
 #mouthImage {
     background-color: rgb(109, 158, 235); 
-    border-radius: 15px;
+    border-radius: 1.5vw;
 }
 
 #mouthImage:hover {
