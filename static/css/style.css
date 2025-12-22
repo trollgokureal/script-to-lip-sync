@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+body {
+   background-color: rgb(207, 226, 243);
+} 
+
+
+content {
+    background-color: rgb(207, 226, 243);
+}
+
+
+.form-label {
+    text-align: center;
+}
+
+
+.card {
+    background-color: rgb(164, 194, 244);
+    color: rgb(78, 139, 232);
+
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    max-width: 1400px;
+
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 100px;
+    font-size: 40px;
+    
+    border-radius: 25px;
+}
+
+#title {
+    background-color: rgb(164, 194, 244);
+    color: rgb(78, 139, 232);
+
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    max-width: 1400px;
+
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 100px;
+    font-size: 40px;
+    
+    border-radius: 25px;
+}
+
+
+.form-control {
+    max-width: 400px;
+    position: absolute;
+
+    top: 270px;
+    left: 550px;
+}
+
+.uploadButton {
+    background-color: rgb(164, 194, 244);
+    color: rgb(78, 139, 232);
+
+    scale: 1.2;
+    position: absolute;
+    
+    top: 274px;
+    left: 960px;
+
+    border-radius: 15%;
+    border: 5px;
+}
+
+.uploadButton:hover {
+    background-color: rgb(109, 158, 235);
+    scale: 1.4;
+}
+
+#maintext {
+
+    position: absolute;
+    top: 350px;
+    max-width: 1400px;
+
+}
+
+#watermark {
+    scale: 50%;
+
+    position: absolute;
+    top: 68vh;
+    left: 35vw;
+
+    max-width: 400px;
+
+}
+
+#watermark2 {
+    scale: 50%;
+
+    position: absolute;
+    top: 23vh;
+    left: 35vw;
+
+    max-width: 400px;
+}
+
+#downloadButton {
+    background-color: rgb(164, 194, 244);
+    color: rgb(78, 139, 232);
+    scale: 1.2;
+    position: absolute;
+    
+    top: 32.4vh;
+    left: 960px;
+
+    border-radius: 15%;
+    border: 5px;
+}
+
+#downloadButton:hover {
+    background-color: rgb(109, 158, 235);
+    scale: 1.4;
+}
+ul {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.container-fluid {
+    background-color: rgb(164, 194, 244);
+    color: rgb(78, 139, 232);
+
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 100px;
+    font-size: 40px;
+
+}
+
+#mouthImage {
+    background-color: rgb(109, 158, 235); 
+    border-radius: 15px;
+}
+
+#mouthImage:hover {
+    scale: 1.06;
+    background-color: rgb(109, 158, 235)
+}
+
+
+
+
+
+
+
+
+
