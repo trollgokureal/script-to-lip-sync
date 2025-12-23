@@ -31,8 +31,7 @@ def script_upload():
             if letter in letterGroups[0]:
                 if letter == "a" or letter == "i":                    
                     neededshapes.append(str(shapes[0])+letter)
-                    
-                    
+
                 elif letter == "e":
                     if words[i][j-1] == "e":   
                             neededshapes.append(str(shapes[2])+letter+"e")
@@ -98,6 +97,7 @@ def script_upload():
         output.write(str(neededshapes[i]))
         output.write("\n")
     output.close()
+
 
     return render_template('download.html', filename = filename, script=neededshapes)
 
