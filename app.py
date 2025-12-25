@@ -2,6 +2,9 @@ import os
 import uuid
 from flask import Flask, render_template, redirect, url_for, request, send_from_directory
 
+base_directory = os.path.dirname(os.path.abspath(__file__))
+download_directory = os.path.join(base_directory, 'downloads')
+
 app = Flask(__name__, template_folder='templates', static_folder='static', static_url_path='/')
 
 @app.route('/', methods=['GET', 'POST'])
@@ -89,10 +92,10 @@ def script_upload():
     filename = f'{uuid.uuid4()}.txt'
 
     if not os.path.exists('downloads'):
-        os.makedirs('downloads')
+        os.makedirs(download_directory, exist_ok=True)
 
 
-    output = open(os.path.join('downloads', filename) , "w")
+    output = open(os.path.join(download_directory, filename) , "w")
     for i in range(len(neededshapes)):
         output.write(str(neededshapes[i]))
         output.write("\n")
