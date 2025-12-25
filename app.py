@@ -91,7 +91,7 @@ def script_upload():
     
     filename = f'{uuid.uuid4()}.txt'
 
-    if not os.path.exists('downloads'):
+    if not os.path.exists(download_directory):
         os.makedirs(download_directory, exist_ok=True)
 
 
@@ -107,7 +107,7 @@ def script_upload():
 @app.route('/download/<filename>')
 def download(filename):
 
-    return send_from_directory('downloads', filename, download_name='result.txt')
+    return send_from_directory(download_directory, filename, download_name='result.txt')
 
 
 
