@@ -9,7 +9,6 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="#" style="font-size: 2.5vw;">BEES</a>
                 <a class="nav-link" aria-current="page" href="{{ url_for('index') }}">Home</a>
-                </li>
             </div>
         </nav>
 
@@ -24,7 +23,7 @@
 
             <a href="{{ url_for('download', filename=filename) }}" class="btn btn-primary" id="downloadButton">Download File</a>
 
-            <body>
+
                 <ul>
                     {% for line in script %}
                         {{ line[::-1][0] }} <br>
@@ -81,6 +80,8 @@
 
     </div>
 
+    </div>
 
-    </body>
+
+
 {% endblock %}
