@@ -10,7 +10,6 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="#" style="font-size: 2.5vw;">BEES</a>
                 <a class="nav-link" aria-current="page" href="{{ url_for('index') }}">Home</a>
-                </li>
             </div>
         </nav>
 
@@ -24,7 +23,7 @@
 
             <form method="POST" action="{{ url_for('script_upload') }}" enctype="multipart/form-data">
                 <input type="file" class="form-control" id="fileform" accept="text/plain" name="file" required="file">
-                <input type="submit" value="Upload", class="uploadButton">
+                <input type="submit" value="Upload" class="uploadButton">
             </form>
             
             <div class="card" id="maintext">
@@ -44,7 +43,7 @@
 
     </div>
 
-
+    </div>
     <script src="/js/hello.js"></script>
 
 {% endblock %}
