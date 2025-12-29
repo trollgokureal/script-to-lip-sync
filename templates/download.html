@@ -1,87 +1,128 @@
 {% extends "base.html" %}
 {% block title %}Download Lip Sync {% endblock %}
 
+
 {% block content %}
-    
-    <div class="downloadPage">
-
-        <nav class="navbar navbar-expand lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#" style="font-size: 2.5vw;">BEES</a>
-                <a class="nav-link" aria-current="page" href="{{ url_for('index') }}">Home</a>
-            </div>
-        </nav>
-
-        <div class="content">
-
-            <div class="card" id="title">
-                <div class="card-body">
-                    Download and View Script
-                </div>
-            </div>
 
 
-            <a href="{{ url_for('download', filename=filename) }}" class="btn btn-primary" id="downloadButton">Download File</a>
+   <div class="downloadPage">
 
 
-                <ul>
-                    {% for line in script %}
-                        {{ line[::-1][0] }} <br>
-                        {% if line[0] == "1" and line[1] != "0" and line[1] != "1" and line[1] != "2" %}
-                            <img src="/img/bees_mouths_1.png" id="mouthImage"></img> <br>
-                        {% endif %}
-                        {% if line[0] == "2" %}
-                            <img src="/img/bees_mouths_2.png"  id="mouthImage"></img> <br>
-                        {% endif %}
-                        {% if line[0] == "3" %}
-                            <img src="/img/bees_mouths_3.png"  id="mouthImage"></img> <br>
-                        {% endif %}
-                        {% if line[0] == "4" %}
-                            <img src="/img/bees_mouths_4.png" id="mouthImage"></img> <br>
-                        {% endif %}
-                        {% if line[0] == "5" %}
-                            <img src="/img/bees_mouths_5.png" id="mouthImage"></img> <br>
-                        {% endif %}
-                        {% if line[0] == "6" %}
-                            <img src="/img/bees_mouths_6.png" id="mouthImage"></img> <br>
-                        {% endif %}
-                        {% if line[0] == "7" %}
-                            <img src="/img/bees_mouths_7.png" id="mouthImage"></img> <br>
-                        {% endif %}
-                        {% if line[0] == "8" %}
-                            <img src="/img/bees_mouths_8.png" id="mouthImage"></img> <br>
-                        {% endif %}
-                        {% if line[0] == "9" %}
-                            <img src="/img/bees_mouths_9.png" id="mouthImage"></img> <br>
-                        {% endif %}
-                        {% if line[0] == "1" and line[1] == "0" %}
-                            <img src="/img/bees_mouths_10.png" id="mouthImage"></img> <br>
-                        {% endif %}
-                        {% if line[0] == "1" and line[1] == "1" %}
-                            <img src="/img/bees_mouths_11.png" id="mouthImage"></img> <br>
-                        {% endif %}
-                        {% if line[0] == "1" and line[1] == "2" %}
-                            <img src="/img/bees_mouths_12.png" id="mouthImage"></img> <br>
-                        {% endif %}
-                        {% if line == " " %}
-                            <img src="/img/bees_mouths_5.png" id="mouthImage"></img> <br>
-                        {% endif %}
-                        
-                    {% endfor %}
-                </ul>
+       <nav class="navbar navbar-expand lg">
+           <div class="container-fluid">
+               <a class="navbar-brand" href="#" style="font-size: 2.5vw;">BEES</a>
+               <a class="nav-link" aria-current="page" href="{{ url_for('index') }}">Home</a>
+           </div>
+       </nav>
 
 
-            <div class="card" id="watermark2">
-                    <div class="card-body">
-                        <a href="https://www.youtube.com/@budgeteliteengineeringsolution">Made by BEES</a>
-                    </div>
+       <div class="content">
 
-            </div>
 
-    </div>
+           <div class="card" id="title">
+               <div class="card-body">
+                   Download and View Script
+               </div>
+           </div>
 
-    </div>
+
+
+
+           <a href="{{ url_for('download', filename=filename) }}" class="btn btn-primary" id="downloadButton">Download File</a>
+
+
+
+
+               <ul>
+                   {% for line in script %}
+
+
+                       {% if line[::-1][0] == "h" %}
+                           {{  line[::-1][1]+line[::-1][0] }} <br>
+                       {% else %}
+                           {%  if line[::-1][0] == "e" %}
+                               {%  if line[::-1][1] == "e" %}
+                                   {{  line[::-1][0]+line[::-1][1] }}
+
+
+                               {% else %}
+                                   {{  line[::-1][0] }}
+                               {% endif %}
+                           {% else %}
+                               {{  line[::-1][0] }}
+                           {%  endif %}
+                       {% endif %}
+
+
+
+
+
+
+                       {% if line[0] == "1" and line[1] != "0" and line[1] != "1" and line[1] != "2" %}
+                           <img src="/img/bees_mouths_1.png" id="mouthImage"></img> <br>
+                       {% endif %}
+                       {% if line[0] == "2" %}
+                           <img src="/img/bees_mouths_2.png"  id="mouthImage"></img> <br>
+                       {% endif %}
+                       {% if line[0] == "3" %}
+                           <img src="/img/bees_mouths_3.png"  id="mouthImage"></img> <br>
+                       {% endif %}
+                       {% if line[0] == "4" %}
+                           <img src="/img/bees_mouths_4.png" id="mouthImage"></img> <br>
+                       {% endif %}
+                       {% if line[0] == "5" %}
+                           <img src="/img/bees_mouths_5.png" id="mouthImage"></img> <br>
+                       {% endif %}
+                       {% if line[0] == "6" %}
+                           <img src="/img/bees_mouths_6.png" id="mouthImage"></img> <br>
+                       {% endif %}
+                       {% if line[0] == "7" %}
+                           <img src="/img/bees_mouths_7.png" id="mouthImage"></img> <br>
+                       {% endif %}
+                       {% if line[0] == "8" %}
+                           <img src="/img/bees_mouths_8.png" id="mouthImage"></img> <br>
+                       {% endif %}
+                       {% if line[0] == "9" %}
+                           <img src="/img/bees_mouths_9.png" id="mouthImage"></img> <br>
+                       {% endif %}
+                       {% if line[0] == "1" and line[1] == "0" %}
+                           <img src="/img/bees_mouths_10.png" id="mouthImage"></img> <br>
+                       {% endif %}
+                       {% if line[0] == "1" and line[1] == "1" %}
+                           <img src="/img/bees_mouths_11.png" id="mouthImage"></img> <br>
+                       {% endif %}
+                       {% if line[0] == "1" and line[1] == "2" %}
+                           <img src="/img/bees_mouths_12.png" id="mouthImage"></img> <br>
+                       {% endif %}
+                       {% if line == " " %}
+                           <img src="/img/bees_mouths_5.png" id="mouthImage"></img> <br>
+                       {% endif %}
+
+
+                   {% endfor %}
+               </ul>
+
+
+
+
+           <div class="card" id="watermark2">
+                   <div class="card-body">
+                       <a href="https://www.youtube.com/@budgeteliteengineeringsolution">Made by BEES</a>
+                   </div>
+
+
+           </div>
+
+
+   </div>
+
+
+   </div>
+
+
+
 
 
 
 {% endblock %}
+
