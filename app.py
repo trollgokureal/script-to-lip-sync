@@ -1,6 +1,8 @@
 import os
 import uuid
 from flask import Flask, render_template, redirect, url_for, request, send_from_directory
+import yt_dlp
+
 
 base_directory = os.path.dirname(os.path.abspath(__file__))
 download_directory = os.path.join(base_directory, 'downloads')
@@ -106,10 +108,36 @@ def script_upload():
 
 @app.route('/download/<filename>')
 def download(filename):
-
     return send_from_directory(download_directory, filename, download_name='result.txt')
 
+@app.route('/videoupload', methods=['POST'])
+def videoupload():
+    link = str(request.form.get('link'))
+    filename = str(uuid.uuid4())
 
+    ydl_opts = {
+        'extractaudio': True,
+        'audioformat': 'mp3',
+        'format': 'bestaudio/best',
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'mp3',
+            'preferredquality': '240',
+        }],
+        'ffmpeg_location': 'C:/ffmpeg/bin',
+        'outtmpl': f'{download_directory}/{filename}.%(ext)s',
+    }
+    filename = filename + '.mp3'
+
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([link])
+
+    return render_template('downloadmp3.html', filename=filename)
+
+
+@app.route('/downloadmp3/<filename>')
+def downloadmp3(filename):
+    return send_from_directory(download_directory, filename, download_name='result.mp3')
 
 
 
