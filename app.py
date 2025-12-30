@@ -58,7 +58,7 @@ def script_upload():
                 else:
                     if j < len(words[i]) - 1:
                         if words[i][j+1] == "h":
-                            if letter == "t":
+                            if letter == "t" or letter == "c":
                                 neededshapes.append(str(shapes[9])+letter+"h")
                             else:                               
                                 neededshapes.append(str(shapes[5])+letter)
